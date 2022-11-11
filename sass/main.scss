@@ -3,3 +3,73 @@
 @import "./base/typography";
 @import "./layout/global";
 @import "./components/header";
+@import "./components/button";
+
+
+.header{
+    &__logo{
+        font-family: 'Shrikhand';
+        font-size: 2rem;
+        padding: 1rem 0;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    }
+    &__location{
+        background: $light-grey;
+        padding: 1rem 0;
+        color: $dark-grey;
+        font-weight: $bold;
+        position: relative;
+        z-index: -1;
+    }
+}
+.explore{
+    padding: 2rem;
+    p{
+        margin: 1.5rem 0;
+        font-size: large;
+        font-weight: lighter;
+    }
+}
+.process{
+    padding: 3rem 1rem;
+    background: $white;
+    h2{
+        text-align: left;
+        margin-bottom: 1.5rem;
+    }
+    &__steps{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        row-gap: 1.5rem;
+    }
+
+}
+.process-steps__step{
+    display: flex;
+    align-items: center;
+    width: 95%;
+    background: $ultra-light-grey;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 1.5rem;
+    padding: 1.8rem 0 1.8rem 2rem;
+    .number{
+        position: absolute;
+        padding: 0.5rem;
+        background: #9256dc;
+        color: #FFFFFF;
+        border-radius: 50%;
+        line-height: .5;
+        aspect-ratio: 1/1;
+        left: 5%;
+    }
+    i{
+        margin-right: 1.5rem;
+    }
+    &:hover{
+        background: $color-primary-light;
+        i{
+            color: $color-primary;
+        }
+    }
+}

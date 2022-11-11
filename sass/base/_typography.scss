@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
 
-html{
+//Font families
+html, button{
     font-family: 'Roboto';
 }
+//Font sizes
+body, button{
+    font-size: 1rem
+}
+h1, h2{
+    font-size: x-large;
+}
+//Font weights
 
 
 

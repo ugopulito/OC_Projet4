@@ -1,9 +1,20 @@
+//COLOR VARIABLES
+//Colors
 $color-primary:#9256dc;
 $color-primary-light:adjust-color($color-primary, $saturation: 34%, $lightness: 36%);
 $color-secondary:#FF79DA;
 $color-tertiary:#99E2D0;
 $white:#FFFFFF;
+
+//Greys
 $grey:hsl(0, 0%, 50%);
 $light-grey:lighten($grey, 42%);
 $dark-grey:darken($grey, 29%);
-$color-background:lighten($grey, 47%);
+$ultra-light-grey:lighten($grey, 47%);
+
+//Gradients
+$gradient-prim-seco:linear-gradient(0deg, $color-primary -5.2%, $color-secondary 110.74%);
+
+//TYPOGRAPHY VARIABLES
+//Weights
+$bold:500;
