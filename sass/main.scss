@@ -63,13 +63,20 @@ h2{
             aspect-ratio: 1/1;
             left: 5%;
         }
-        i{
-            margin-right: 1.5rem;
+        .text{
+            display: flex;
+            svg{
+                margin-right: 1.5rem;
+                fill: $grey;
+            }
         }
         &:hover{
             background: $color-primary-light;
-            i{
+            .text{
                 color: $color-primary;
+                svg{
+                    fill: $color-primary;
+                }
             }
         }
     }
@@ -82,11 +89,20 @@ h2{
         row-gap: 1rem;
     }
     &-cards__card{
-        max-height: 270px;
         background: #FFFFFF;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
         border-radius: 1rem;
         overflow: hidden;
+        .badge-new{
+            position: absolute;
+            right: 2rem;
+            margin-top: 1rem;
+            background: #98e2cf;
+            color: #008563;
+            padding: 0.5rem;
+            box-shadow: 0px 2px 4px rgb(0 0 0 / 15%);
+            border-radius: 2px;
+        }
         img{
             width: 100%;
             max-height: 225px;
@@ -95,8 +111,28 @@ h2{
         .infos{
             display: flex;
             padding: 1rem;
+            justify-content: space-between;
             &__name{
                 text-align: left;
+                span{
+                    font-weight: lighter;
+                }
+            }
+            i{
+                font-size: 1.5rem;
+                &:hover{
+                    color: $color-primary;
+                }
+            }
+            svg{
+                font-size: 1.5rem;
+                fill: $white;
+                stroke: $grey;
+                stroke-width: 2px;
+                &:hover{
+                    fill:url(#icon-gradient);
+                    stroke: none;
+                }
             }
         }
     }

@@ -103,14 +103,21 @@ h2 {
   aspect-ratio: 1/1;
   left: 5%;
 }
-.process-steps__step i {
+.process-steps__step .text {
+  display: flex;
+}
+.process-steps__step .text svg {
   margin-right: 1.5rem;
+  fill: hsl(0deg, 0%, 50%);
 }
 .process-steps__step:hover {
   background: #f4ebff;
 }
-.process-steps__step:hover i {
+.process-steps__step:hover .text {
   color: #9256dc;
+}
+.process-steps__step:hover .text svg {
+  fill: #9256dc;
 }
 
 .restaurants {
@@ -122,11 +129,20 @@ h2 {
   row-gap: 1rem;
 }
 .restaurants-cards__card {
-  max-height: 270px;
   background: #FFFFFF;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
   overflow: hidden;
+}
+.restaurants-cards__card .badge-new {
+  position: absolute;
+  right: 2rem;
+  margin-top: 1rem;
+  background: #98e2cf;
+  color: #008563;
+  padding: 0.5rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
 }
 .restaurants-cards__card img {
   width: 100%;
@@ -136,9 +152,29 @@ h2 {
 .restaurants-cards__card .infos {
   display: flex;
   padding: 1rem;
+  justify-content: space-between;
 }
 .restaurants-cards__card .infos__name {
   text-align: left;
+}
+.restaurants-cards__card .infos__name span {
+  font-weight: lighter;
+}
+.restaurants-cards__card .infos i {
+  font-size: 1.5rem;
+}
+.restaurants-cards__card .infos i:hover {
+  color: #9256dc;
+}
+.restaurants-cards__card .infos svg {
+  font-size: 1.5rem;
+  fill: #FFFFFF;
+  stroke: hsl(0deg, 0%, 50%);
+  stroke-width: 2px;
+}
+.restaurants-cards__card .infos svg:hover {
+  fill: url(#icon-gradient);
+  stroke: none;
 }
 
 .footer {
