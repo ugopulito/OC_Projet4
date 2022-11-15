@@ -25,6 +25,12 @@ h1, h2 {
   font-size: x-large;
 }
 
+h3, li {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 body {
   margin: 0 auto;
   background: #f7f7f7;
@@ -39,6 +45,9 @@ body {
   border-radius: 2rem;
   border: none;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.btn:hover {
+  background: linear-gradient(0deg, hsl(267deg, 66%, 65%) -5.2%, hsl(317deg, 100%, 79%) 110.74%);
 }
 
 .disabled {
@@ -81,17 +90,18 @@ h2 {
 .process__steps {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   row-gap: 1.5rem;
 }
 .process-steps__step {
+  position: relative;
   display: flex;
   align-items: center;
   width: 95%;
   background: #f7f7f7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 1.5rem;
-  padding: 1.8rem 0 1.8rem 2rem;
+  padding: 2rem;
 }
 .process-steps__step .number {
   position: absolute;
@@ -101,7 +111,7 @@ h2 {
   border-radius: 50%;
   line-height: 0.5;
   aspect-ratio: 1/1;
-  left: 5%;
+  left: -1rem;
 }
 .process-steps__step .text {
   display: flex;
@@ -109,12 +119,10 @@ h2 {
 .process-steps__step .text svg {
   margin-right: 1.5rem;
   fill: hsl(0deg, 0%, 50%);
+  overflow: visible;
 }
 .process-steps__step:hover {
   background: #f4ebff;
-}
-.process-steps__step:hover .text {
-  color: #9256dc;
 }
 .process-steps__step:hover .text svg {
   fill: #9256dc;
@@ -156,29 +164,25 @@ h2 {
 }
 .restaurants-cards__card .infos__name {
   text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .restaurants-cards__card .infos__name span {
   font-weight: lighter;
 }
-.restaurants-cards__card .infos i {
-  font-size: 1.5rem;
-}
-.restaurants-cards__card .infos i:hover {
-  color: #9256dc;
-}
-.restaurants-cards__card .infos svg {
-  font-size: 1.5rem;
-  fill: #FFFFFF;
-  stroke: hsl(0deg, 0%, 50%);
+.restaurants-cards__card svg {
+  stroke: #363636;
   stroke-width: 2px;
+  overflow: visible;
 }
-.restaurants-cards__card .infos svg:hover {
+.restaurants-cards__card svg:hover {
   fill: url(#icon-gradient);
   stroke: none;
 }
 
 .footer {
-  padding: 2rem 1rem;
+  padding: 1.5rem;
   background: #363636;
   text-align: left;
   color: #FFFFFF;
@@ -187,6 +191,18 @@ h2 {
   font-family: "Shrikhand";
   font-size: 1.2rem;
   margin-bottom: 1rem;
+}
+.footer li {
+  line-height: 1.5rem;
+}
+.footer a {
+  display: flex;
+  align-items: center;
+}
+.footer svg {
+  margin-right: 0.5rem;
+  fill: #FFFFFF;
+  overflow: visible;
 }
 
 /*# sourceMappingURL=style.css.map */

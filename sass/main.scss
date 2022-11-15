@@ -42,17 +42,18 @@ h2{
     &__steps{
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
         row-gap: 1.5rem;
     }
     &-steps__step{
+        position: relative;
         display: flex;
         align-items: center;
         width: 95%;
         background: $ultra-light-grey;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
         border-radius: 1.5rem;
-        padding: 1.8rem 0 1.8rem 2rem;
+        padding: 2rem;
         .number{
             position: absolute;
             padding: 0.5rem;
@@ -61,19 +62,19 @@ h2{
             border-radius: 50%;
             line-height: .5;
             aspect-ratio: 1/1;
-            left: 5%;
+            left: -1rem;
         }
         .text{
             display: flex;
             svg{
                 margin-right: 1.5rem;
                 fill: $grey;
+                overflow: visible;
             }
         }
         &:hover{
             background: $color-primary-light;
             .text{
-                color: $color-primary;
                 svg{
                     fill: $color-primary;
                 }
@@ -114,31 +115,27 @@ h2{
             justify-content: space-between;
             &__name{
                 text-align: left;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
                 span{
                     font-weight: lighter;
                 }
             }
-            i{
-                font-size: 1.5rem;
-                &:hover{
-                    color: $color-primary;
-                }
-            }
-            svg{
-                font-size: 1.5rem;
-                fill: $white;
-                stroke: $grey;
-                stroke-width: 2px;
-                &:hover{
-                    fill:url(#icon-gradient);
-                    stroke: none;
-                }
+        }
+        svg{
+            stroke: $dark-grey;
+            stroke-width: 2px;
+            overflow: visible;
+            &:hover{
+                fill:url(#icon-gradient);
+                stroke: none;
             }
         }
     }
 }
 .footer{
-    padding: 2rem 1rem;
+    padding: 1.5rem;
     background: $dark-grey;
     text-align: left;
     color: $white;
@@ -146,5 +143,17 @@ h2{
         font-family: 'Shrikhand';
         font-size: 1.2rem;
         margin-bottom: 1rem;
+    }
+    li{
+        line-height: 1.5rem;
+    }
+    a{
+        display: flex;
+        align-items: center;
+    }
+    svg{
+        margin-right: .5rem;
+        fill: $white;
+        overflow: visible;
     }
 }
