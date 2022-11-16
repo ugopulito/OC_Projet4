@@ -8,6 +8,22 @@
 .disabled{
     display: none;
 }
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.loader{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 99;
+    background: $white;
+    animation: fade 1s ease-in-out 4s 1 forwards;
+}
 .header{
     &__logo{
         font-family: 'Shrikhand';
@@ -56,13 +72,14 @@ h2{
         padding: 2rem;
         transition: all 300ms;
         .number{
-            position: absolute;
-            padding: 0.5rem;
+            width: 1.5rem;
+            line-height: 1.5rem;
+            aspect-ratio: 1/1;
+            text-align: center;
             background: #9256dc;
             color: #FFFFFF;
             border-radius: 50%;
-            line-height: .5;
-            aspect-ratio: 1/1;
+            position: absolute;
             left: -1rem;
         }
         .text{
