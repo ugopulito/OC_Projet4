@@ -2,7 +2,8 @@
 //Colors
 $color-primary:#9256dc;
 $color-primary-light:adjust-color($color-primary, $saturation: 34%, $lightness: 36%);
-$color-secondary:#FF79DA;
+$color-secondary:hsl(317, 100%, 74%);
+$color-secondary-light:adjust-color($color-secondary, $lightness: 14%);
 $color-tertiary:#99E2D0;
 $white:#FFFFFF;
 
@@ -14,7 +15,15 @@ $ultra-light-grey:lighten($grey, 47%);
 
 //Gradients
 $gradient-prim-seco:linear-gradient(0deg, $color-primary -5.2%, $color-secondary 110.74%);
+$gradient-prim-seco-light:linear-gradient(0deg, $color-primary-light -5.2%, $color-secondary-light 110.74%);
 
 //TYPOGRAPHY VARIABLES
 //Weights
 $bold:500;
+
+//SHADOWS
+$shadow-color:hsla(0, 0%, 0%, 0.15);
+$card-shadow: 0px 4px 15px $shadow-color;
+$card-shadow-darker: 0px 4px 15px change-color($shadow-color, $alpha: 0.30);
+$button-shadow: 0px 4px 10px $shadow-color;
+$button-shadow-darker: 0px 4px 10px change-color($shadow-color, $alpha: 0.30);
