@@ -1,0 +1,20 @@
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    95%{
+        opacity: 0;
+        height: 100%;
+    }
+    100% {
+        height: 0%;
+    }
+}
+.loader{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 99;
+    background: $white;
+    animation: fade 1s ease-in-out 2s 1 forwards;
+}

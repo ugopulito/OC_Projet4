@@ -1,28 +1,13 @@
 @import "./utils/variables";
 @import "./base/reset";
 @import "./base/typography";
+@import "./components/loader";
 @import "./layout/global";
 @import "./components/header";
 @import "./components/button";
 
 .disabled{
     display: none;
-}
-@keyframes fade {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-.loader{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 99;
-    background: $white;
-    animation: fade 1s ease-in-out 4s 1 forwards;
 }
 .header{
     &__logo{
