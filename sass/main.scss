@@ -6,10 +6,17 @@
 @import "./components/header";
 @import "./components/button";
 
+//Global
 .disabled{
     display: none;
 }
 .header{
+    position: relative;
+    &__arrow{
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+    }
     &__logo{
         font-family: 'Shrikhand';
         font-size: 2rem;
@@ -28,112 +35,6 @@
 h2{
     text-align: left;
     margin-bottom: 1.5rem;
-}
-.explore{
-    padding: 2rem;
-    p{
-        margin: 1.5rem 0;
-        font-size: large;
-        font-weight: lighter;
-    }
-}
-.process{
-    padding: 3rem 1rem;
-    background: $white;
-    .process-steps{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        row-gap: 1.5rem;
-        &__step{
-            position: relative;
-            display: flex;
-            align-items: center;
-            width: 95%;
-            background: $ultra-light-grey;
-            box-shadow: $card-shadow;
-            border-radius: 1.5rem;
-            padding: 2rem;
-            transition: all 300ms;
-            .number{
-                width: 1.5rem;
-                line-height: 1.5rem;
-                aspect-ratio: 1/1;
-                text-align: center;
-                background: #9256dc;
-                color: #FFFFFF;
-                border-radius: 50%;
-                position: absolute;
-                left: -1rem;
-            }
-            .text{
-                display: flex;
-                svg{
-                    margin-right: 1.5rem;
-                    fill: $grey;
-                    overflow: visible;
-                    transition: fill 400ms ease-in-out;
-                }
-            }
-            &:hover{
-                background: $color-primary-light;
-                .text{
-                    svg{
-                        fill: $color-primary;
-                    }
-                }
-            }
-        }
-    }
-}
-.restaurants{
-    padding: 3rem 1rem;
-    .restaurants-cards{
-        display: flex;
-        flex-direction: column;
-        row-gap: 1rem;
-        &__card{
-            position:relative;
-            background: $white;
-            box-shadow: $card-shadow;
-            border-radius: 1rem;
-            overflow: hidden;
-            transition: all 300ms;
-            .badge-new{
-                position: absolute;
-                right: 2rem;
-                margin-top: 1rem;
-                background: #98e2cf;
-                color: #008563;
-                padding: 0.5rem;
-                box-shadow: 0px 2px 4px rgb(0 0 0 / 15%);
-                border-radius: .2rem;
-            }
-            img{
-                width: 100%;
-                max-height: 225px;
-                object-fit: cover;
-            }
-            .infos{
-                display: flex;
-                padding: 1rem 3rem 1rem 1rem;
-                justify-content: space-between;
-                align-items: flex-start;
-                &__name{
-                    text-align: left;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    span{
-                        font-weight: lighter;
-                    }
-                }
-            }
-            &:hover{
-                box-shadow: $card-shadow-darker;
-            }
-        }
-    }
 }
 .footer{
     padding: 1.5rem;
@@ -156,5 +57,166 @@ h2{
         margin-right: .5rem;
         fill: $white;
         overflow: visible;
+    }
+}
+//Page d'accueil
+.explore{
+    padding: 2rem;
+    p{
+        margin: 1.5rem 0;
+        font-size: large;
+        font-weight: lighter;
+    }
+}
+.process{
+    padding: 3rem 1rem;
+    background: $white;
+}
+.process-steps{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
+    &__step{
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 95%;
+        background: $ultra-light-grey;
+        box-shadow: $card-shadow;
+        border-radius: 1.5rem;
+        padding: 2rem;
+        transition: all 300ms;
+        .number{
+            width: 1.5rem;
+            line-height: 1.5rem;
+            aspect-ratio: 1/1;
+            text-align: center;
+            background: #9256dc;
+            color: #FFFFFF;
+            border-radius: 50%;
+            position: absolute;
+            left: -1rem;
+        }
+        .text{
+            display: flex;
+            svg{
+                margin-right: 1.5rem;
+                fill: $grey;
+                overflow: visible;
+                transition: fill 400ms ease-in-out;
+            }
+        }
+        &:hover{
+            background: $color-primary-light;
+            .text{
+                svg{
+                    fill: $color-primary;
+                }
+            }
+        }
+    }
+}
+.restaurants{
+    padding: 3rem 1rem;
+}
+.restaurants-cards{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    &__card{
+        position:relative;
+        background: $white;
+        box-shadow: $card-shadow;
+        border-radius: 1rem;
+        overflow: hidden;
+        transition: all 300ms;
+        .badge-new{
+            position: absolute;
+            right: 2rem;
+            margin-top: 1rem;
+            background: #98e2cf;
+            color: #008563;
+            padding: 0.5rem;
+            box-shadow: 0px 2px 4px rgb(0 0 0 / 15%);
+            border-radius: .2rem;
+        }
+        img{
+            width: 100%;
+            max-height: 225px;
+            object-fit: cover;
+        }
+        .infos{
+            display: flex;
+            padding: 1rem 3rem 1rem 1rem;
+            justify-content: space-between;
+            align-items: flex-start;
+            &__name{
+                text-align: left;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                span{
+                    font-weight: lighter;
+                }
+            }
+        }
+        &:hover{
+            box-shadow: $card-shadow-darker;
+        }
+    }
+}
+//Page Restaurant
+.hero-image{
+    width: 100%;
+    aspect-ratio: 375/275;
+}
+.menu{
+    background: $light-grey;
+    border-radius: 2rem 2rem 0 0;
+    width: 100%;
+    transform: translateY(-3rem);
+    padding: 2rem 1rem;
+    &__restaurant-name{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h2{
+            font-family: "Shrikhand";
+            font-size: 1.8rem;
+            margin: 0;
+        }
+        .like{
+            right: auto;
+            bottom: auto;
+            position: inherit;
+        }
+    }
+    &__subsection{
+        text-transform: uppercase;
+        text-align: left;
+        font-size: 1rem;
+        font-weight: lighter;
+        color: $grey;
+        margin: 2.5rem 0 1rem;
+    }
+    &__element{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        background-color: $white;
+        padding: .9rem;
+        border-radius: 1rem;
+        box-shadow: $card-shadow;
+        margin-bottom: 1rem;
+        h3{
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        span{
+            font-weight: lighter;
+            font-size: 1rem;
+        }
     }
 }
