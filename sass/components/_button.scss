@@ -13,6 +13,10 @@
         filter: brightness(1.05);
         box-shadow: $button-shadow-darker;
     }
+    &.btn-order{
+        margin-bottom: 2.5rem;
+        padding: 1rem 3rem;
+    }
 }
 //Like Button
 @keyframes grow-and-shrink {

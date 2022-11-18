@@ -172,11 +172,11 @@ h2{
     aspect-ratio: 375/275;
 }
 .menu{
-    background: $light-grey;
+    background-color: $ultra-light-grey;
     border-radius: 2rem 2rem 0 0;
     width: 100%;
     transform: translateY(-3rem);
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 0;
     &__restaurant-name{
         display: flex;
         justify-content: space-between;
@@ -193,30 +193,40 @@ h2{
         }
     }
     &__subsection{
+        margin-top: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        >h3{
         text-transform: uppercase;
         text-align: left;
         font-size: 1rem;
         font-weight: lighter;
         color: $grey;
-        margin: 2.5rem 0 1rem;
+        background-image: linear-gradient(0deg, $color-tertiary, $color-tertiary);
+        background-position: bottom left;
+        background-size: 12% 0.2rem;
+        background-repeat: no-repeat;
+        padding-bottom: 0.5rem;
+        }
     }
-    &__element{
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        background-color: $white;
-        padding: .9rem;
-        border-radius: 1rem;
-        box-shadow: $card-shadow;
-        margin-bottom: 1rem;
-        h3{
-            text-align: left;
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-        span{
-            font-weight: lighter;
-            font-size: 1rem;
-        }
+}
+.subsection-element{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: $white;
+    padding: .9rem;
+    border-radius: 1rem;
+    box-shadow: $card-shadow;
+    h3{
+        text-align: left;
+        font-size: 1.1rem;
+        font-weight: 500;
+        width: 70%;
+    }
+    span{
+        font-weight: lighter;
+        font-size: 1rem;
     }
 }
