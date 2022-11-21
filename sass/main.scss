@@ -1,4 +1,5 @@
 @import "./utils/variables";
+@import "./utils/mixins";
 @import "./base/reset";
 @import "./base/typography";
 @import "./components/loader";
@@ -35,6 +36,9 @@
 h2{
     text-align: left;
     margin-bottom: 1.5rem;
+    @include format(tablet){
+        width: 70vw;
+    }
 }
 .footer{
     padding: 1.5rem;
@@ -59,6 +63,7 @@ h2{
         overflow: visible;
     }
 }
+
 //Page d'accueil
 .explore{
     padding: 2rem;
@@ -71,6 +76,11 @@ h2{
 .process{
     padding: 3rem 1rem;
     background: $white;
+    @include format(tablet){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 .process-steps{
     display: flex;
@@ -86,7 +96,7 @@ h2{
         box-shadow: $card-shadow;
         border-radius: 1.5rem;
         padding: 2rem;
-        transition: all 300ms;
+        transition: fill 300ms;
         .number{
             width: 1.5rem;
             line-height: 1.5rem;
@@ -100,6 +110,7 @@ h2{
         }
         .text{
             display: flex;
+            align-items: center;
             svg{
                 margin-right: 1.5rem;
                 fill: $grey;
@@ -115,10 +126,28 @@ h2{
                 }
             }
         }
+        @include format(desktop){
+            width: 30%;
+        }
+    }
+    @include format(tablet){
+        width: 70vw;
+    }
+    @include format(desktop){
+        flex-flow: row;
+        justify-content: space-between;
+        left: 1rem;
+        position: relative;
     }
 }
 .restaurants{
     padding: 3rem 1rem;
+    @include format(tablet){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
 }
 .restaurants-cards{
     display: flex;
@@ -130,7 +159,7 @@ h2{
         box-shadow: $card-shadow;
         border-radius: 1rem;
         overflow: hidden;
-        transition: all 300ms;
+        transition: box-shadow 300ms;
         .badge-new{
             position: absolute;
             right: 2rem;
@@ -143,7 +172,7 @@ h2{
         }
         img{
             width: 100%;
-            max-height: 225px;
+            aspect-ratio: 335/175;
             object-fit: cover;
         }
         .infos{
@@ -164,12 +193,22 @@ h2{
         &:hover{
             box-shadow: $card-shadow-darker;
         }
+        @include format(tablet){
+            min-width: 22vw;
+        }
+    }
+    @include format(tablet){
+        flex-flow: row;
+        width: 70vw;
+        column-gap: 2rem;
     }
 }
+
 //Page Restaurant
 .hero-image{
     width: 100%;
     aspect-ratio: 375/275;
+    object-fit: cover;
 }
 .menu{
     background-color: $ultra-light-grey;
@@ -219,6 +258,7 @@ h2{
     padding: .9rem;
     border-radius: 1rem;
     box-shadow: $card-shadow;
+    transition: box-shadow 300ms;
     h3{
         text-align: left;
         font-size: 1.1rem;
@@ -228,5 +268,8 @@ h2{
     span{
         font-weight: lighter;
         font-size: 1rem;
+    }
+    &:hover{
+        box-shadow: $card-shadow-darker;
     }
 }
