@@ -27,13 +27,13 @@
     justify-content: center;
     align-items: center;
     background: $gradient-prim-seco;
-    animation: fade 1s ease 6s 1 forwards;
+    animation: fade 1s ease 3.5s 1 forwards;
     &__ring{
         width: 10%;
         aspect-ratio: 1;
         border: .5rem solid $light-grey;
         border-top: .5rem solid $color-primary;
         border-radius: 50%;
-        animation: rotate 1s ease infinite, fade 1s ease 2s forwards;
+        animation: rotate 1s ease infinite, fade 1s ease 3s forwards;
     }
 }

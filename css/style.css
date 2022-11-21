@@ -66,7 +66,7 @@ h3, li {
   justify-content: center;
   align-items: center;
   background: linear-gradient(0deg, #9256dc -5.2%, hsl(317deg, 100%, 74%) 110.74%);
-  animation: fade 1s ease 6s 1 forwards;
+  animation: fade 1s ease 3.5s 1 forwards;
 }
 .loader__ring {
   width: 10%;
@@ -74,7 +74,7 @@ h3, li {
   border: 0.5rem solid #ebebeb;
   border-top: 0.5rem solid #9256dc;
   border-radius: 50%;
-  animation: rotate 1s ease infinite, fade 1s ease 2s forwards;
+  animation: rotate 1s ease infinite, fade 1s ease 3s forwards;
 }
 
 body {
@@ -195,6 +195,11 @@ h2 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
+@media (min-width: 768px) {
+  .footer__logo {
+    margin: 0;
+  }
+}
 .footer li {
   line-height: 1.5rem;
 }
@@ -206,6 +211,18 @@ h2 {
   margin-right: 0.5rem;
   fill: #FFFFFF;
   overflow: visible;
+}
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 3rem 6rem;
+    column-gap: 4rem;
+  }
+  .footer ul {
+    display: flex;
+    column-gap: 3rem;
+  }
 }
 
 .explore {
