@@ -2,7 +2,7 @@
 //Colors
 $color-primary:#9256dc;
 $color-primary-light:adjust-color($color-primary, $saturation: 34%, $lightness: 36%);
-$color-secondary:hsl(317, 100%, 74%);
+$color-secondary:rgb(255, 122, 217);
 $color-secondary-light:adjust-color($color-secondary, $lightness: 14%);
 $color-tertiary:#99E2D0;
 $white:#FFFFFF;
@@ -15,6 +15,7 @@ $ultra-light-grey:lighten($grey, 47%);
 
 //Gradients
 $gradient-prim-seco:linear-gradient(0deg, $color-primary -5.2%, $color-secondary 110.74%);
+$loader-gradient:radial-gradient(circle, $color-secondary 0%, $color-primary 100%);
 $gradient-prim-seco-light:linear-gradient(0deg, $color-primary-light -5.2%, $color-secondary-light 110.74%);
 
 //TYPOGRAPHY VARIABLES
