@@ -36,8 +36,11 @@
 h2{
     text-align: left;
     margin-bottom: 1.5rem;
+    max-width: 537px;
+    width: 100%;
     @include format(tablet){
         width: 70vw;
+        max-width: initial;
     }
 }
 .footer{
@@ -88,18 +91,18 @@ h2{
 }
 .process{
     padding: 3rem 1rem;
-    background: $white;
-    @include format(tablet){
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .process-steps{
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 1.5rem;
+    max-width: 33.5rem;
+    width: 100%;
     &__step{
         position: relative;
         display: flex;
@@ -145,6 +148,7 @@ h2{
     }
     @include format(tablet){
         width: 70vw;
+        max-width: initial;
     }
     @include format(desktop){
         flex-flow: row;

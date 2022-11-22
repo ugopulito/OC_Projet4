@@ -242,10 +242,13 @@ body {
 h2 {
   text-align: left;
   margin-bottom: 1.5rem;
+  max-width: 537px;
+  width: 100%;
 }
 @media (min-width: 768px) {
   h2 {
     width: 70vw;
+    max-width: initial;
   }
 }
 
@@ -302,13 +305,9 @@ h2 {
 .process {
   padding: 3rem 1rem;
   background: #FFFFFF;
-}
-@media (min-width: 768px) {
-  .process {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .process-steps {
@@ -316,6 +315,8 @@ h2 {
   flex-direction: column;
   align-items: center;
   row-gap: 1.5rem;
+  max-width: 33.5rem;
+  width: 100%;
 }
 .process-steps__step {
   position: relative;
@@ -363,6 +364,7 @@ h2 {
 @media (min-width: 768px) {
   .process-steps {
     width: 70vw;
+    max-width: initial;
   }
 }
 @media (min-width: 1024px) {
