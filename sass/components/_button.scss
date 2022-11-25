@@ -14,8 +14,10 @@
         box-shadow: $button-shadow-darker;
     }
     &.btn-order{
-        margin-bottom: 2.5rem;
+        margin: 2.5rem 0;
         padding: 1rem 3rem;
+        opacity: 0;
+        animation: fade-in 1s ease 4s forwards;
     }
 }
 //Like Button

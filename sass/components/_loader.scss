@@ -64,6 +64,9 @@
         padding: 1rem 0;
         color: $light-grey;
         animation: fade-in 1s, slide-in ease 1.5s forwards, grow 2s ease-out 3s forwards;
+        @include format(tablet){
+            font-size: 4rem;
+        }
     }
     &__dots{
         display: flex;
