@@ -1,0 +1,43 @@
+.footer{
+    padding: 1.5rem;
+    background: $dark-grey;
+    text-align: left;
+    color: $white;
+    &__logo{
+        font-family: 'Shrikhand';
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        @include format(tablet){
+            margin: 0;
+        }
+    }
+    li{
+        line-height: 1.5rem;
+    }
+    a{
+        display: flex;
+        align-items: center;
+    }
+    svg{
+        margin-right: .5rem;
+        fill: $white;
+        overflow: visible;
+    }
+    @include format(tablet){
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 3rem 1.5rem;
+        column-gap: 3%;
+        ul{
+            display: flex;
+            column-gap: 3%;
+            flex: 1;
+            justify-content: flex-end;
+        }
+    }
+    @include format(desktop){
+        column-gap: 5%;
+        ul{column-gap: 5%;}
+    }
+}
