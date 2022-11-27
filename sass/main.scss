@@ -1,38 +1,21 @@
 @import "./utils/variables";
 @import "./utils/mixins";
+
+@import "./components/loader";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/button";
+
 @import "./base/reset";
 @import "./base/typography";
-@import "./components/loader";
+
 @import "./layout/global";
-@import "./components/header";
-@import "./components/button";
 
 //Global
 .disabled{
     display: none;
 }
-.header{
-    position: relative;
-    &__arrow{
-        position: absolute;
-        top: 2rem;
-        left: 2rem;
-    }
-    &__logo{
-        font-family: 'Shrikhand';
-        font-size: 2rem;
-        padding: 1rem 0;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-    }
-    &__location{
-        background: $light-grey;
-        padding: 1rem 0;
-        color: $dark-grey;
-        font-weight: $bold;
-        position: relative;
-        z-index: -1;
-    }
-}
+
 h2{
     text-align: left;
     margin-bottom: 1.5rem;
@@ -43,42 +26,7 @@ h2{
         max-width: initial;
     }
 }
-.footer{
-    padding: 1.5rem;
-    background: $dark-grey;
-    text-align: left;
-    color: $white;
-    &__logo{
-        font-family: 'Shrikhand';
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-        @include format(tablet){
-            margin: 0;
-        }
-    }
-    li{
-        line-height: 1.5rem;
-    }
-    a{
-        display: flex;
-        align-items: center;
-    }
-    svg{
-        margin-right: .5rem;
-        fill: $white;
-        overflow: visible;
-    }
-    @include format(tablet){
-        display: flex;
-        flex-direction: row-reverse;
-        padding: 3rem 6rem;
-        column-gap: 4rem;
-        ul{
-            display: flex;
-            column-gap: 3rem;
-        }
-    }
-}
+
 
 //Page d'accueil
 .explore{
@@ -248,14 +196,15 @@ h2{
     margin: 0 auto;
     &__restaurant-name{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         max-width: 650px;
         margin: 0 auto;
         h2{
             font-family: "Shrikhand";
             font-size: 1.8rem;
-            margin: 0;
+            margin: 0 1.5rem 0 0;
+            width: fit-content;
         }
         .like{
             right: auto;
