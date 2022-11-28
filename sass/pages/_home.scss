@@ -1,0 +1,161 @@
+//Global
+h2{
+    text-align: left;
+    margin-bottom: 1.5rem;
+    max-width: 33.5rem;
+    width: 100%;
+    @include format(tablet){
+        width: 70vw;
+        max-width: initial;
+    }
+}
+
+//Explore section
+.explore{
+    background: $ultra-light-grey;
+    padding: 2rem;
+    p{
+        margin: 1.5rem 0;
+        font-size: large;
+        font-weight: lighter;
+    }
+}
+
+//Process section
+.process{
+    padding: 3rem 1rem;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.process-steps{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
+    max-width: 33.5rem;
+    width: 100%;
+    &__step{
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 95%;
+        background: $ultra-light-grey;
+        box-shadow: $card-shadow;
+        border-radius: 1.5rem;
+        padding: 2rem;
+        .number{
+            width: 1.5rem;
+            line-height: 1.5rem;
+            aspect-ratio: 1/1;
+            text-align: center;
+            background: #9256dc;
+            color: #FFFFFF;
+            border-radius: 50%;
+            position: absolute;
+            left: -1rem;
+        }
+        .text{
+            display: flex;
+            align-items: center;
+            svg{
+                margin-right: 1.5rem;
+                fill: $grey;
+                overflow: visible;
+            }
+        }
+        &:last-child{
+            background: $color-primary-light;
+            .text{
+                svg{
+                    fill: $color-primary;
+                }
+            }
+        }
+        @include format(desktop){
+            width: 30%;
+        }
+    }
+    @include format(tablet){
+        width: 70vw;
+        max-width: initial;
+    }
+    @include format(desktop){
+        flex-flow: row;
+        justify-content: space-between;
+        left: 1rem;
+        position: relative;
+    }
+}
+
+//Restaurants list
+.restaurants{
+    background: $ultra-light-grey;
+    padding: 3rem 1rem;
+    @include format(tablet){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: scroll;
+        h2{
+            position: absolute;
+            margin: 0;
+        }
+    }
+}
+.restaurants-cards{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    &__card{
+        position:relative;
+        background: $white;
+        box-shadow: $card-shadow;
+        border-radius: 1rem;
+        overflow: hidden;
+        transition: box-shadow 300ms;
+        .badge-new{
+            position: absolute;
+            right: 2rem;
+            margin-top: 1rem;
+            background: $badge-background;
+            color: $badge-color;
+            padding: 0.5rem;
+            box-shadow: 0px 2px 4px $shadow-color;
+            border-radius: .2rem;
+        }
+        img{
+            width: 100%;
+            aspect-ratio: 335/175;
+            object-fit: cover;
+        }
+        .infos{
+            display: flex;
+            padding: 1rem 3rem 1rem 1rem;
+            justify-content: space-between;
+            align-items: flex-start;
+            &__name{
+                text-align: left;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                span{
+                    font-weight: lighter;
+                }
+            }
+        }
+        &:hover{
+            box-shadow: $card-shadow-darker;
+        }
+        @include format(tablet){
+            min-width: 22vw;
+        }
+    }
+    @include format(tablet){
+        flex-flow: row;
+        width: 70vw;
+        column-gap: 2rem;
+        margin-top: 3rem;
+    }
+}

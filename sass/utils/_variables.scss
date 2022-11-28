@@ -2,13 +2,15 @@
 //Colors
 $color-primary:#9256dc;
 $color-primary-light:adjust-color($color-primary, $saturation: 34%, $lightness: 36%);
-$color-secondary:rgb(255, 122, 217);
+$color-secondary:#ff7ad9;
 $color-secondary-light:adjust-color($color-secondary, $lightness: 14%);
 $color-tertiary:#99E2D0;
 $white:#FFFFFF;
+$badge-background:#98e2cf;
+$badge-color:#008563;
 
 //Greys
-$grey:hsl(0, 0%, 50%);
+$grey:#808080;
 $light-grey:lighten($grey, 42%);
 $dark-grey:darken($grey, 29%);
 $ultra-light-grey:lighten($grey, 47%);
@@ -23,7 +25,7 @@ $gradient-prim-seco-light:linear-gradient(0deg, $color-primary-light -5.2%, $col
 $bold:500;
 
 //SHADOWS
-$shadow-color:hsla(0, 0%, 0%, 0.15);
+$shadow-color:#00000026;
 $card-shadow: 0px 4px 15px $shadow-color;
 $card-shadow-darker: 0px 4px 15px change-color($shadow-color, $alpha: 0.30);
 $button-shadow: 0px 4px 10px $shadow-color;

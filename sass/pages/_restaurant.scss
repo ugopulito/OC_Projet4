@@ -1,0 +1,109 @@
+.hero-image{
+    width: 100%;
+    aspect-ratio: 375/275;
+    object-fit: cover;
+    max-height: 27rem;
+    margin-bottom: -3rem;
+    z-index: -1;
+    position: relative;
+}
+.menu{
+    background-color: $ultra-light-grey;
+    border-radius: 2rem 2rem 0 0;
+    width: 100%;
+    padding: 2rem 1rem 0;
+    max-width: 65rem;
+    margin: 0 auto;
+    &__restaurant-name{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 40.6rem;
+        margin: 0 auto;
+        h2{
+            font-family: "Shrikhand";
+            font-size: 1.8rem;
+            margin: 0 1.5rem 0 0;
+            width: fit-content;
+        }
+        .like{
+            right: auto;
+            bottom: auto;
+            position: inherit;
+        }
+    }
+    &__subsection{
+        margin: 2.5rem auto 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        max-width: 40.6rem;
+        opacity: 0;
+        animation: fade-in 1s ease .5s forwards;
+        >h3{
+            text-transform: uppercase;
+            text-align: left;
+            font-size: 1rem;
+            font-weight: lighter;
+            color: $grey;
+            background-image: linear-gradient(0deg, $color-tertiary, $color-tertiary);
+            background-position: bottom left;
+            background-size: 12% 0.2rem;
+            background-repeat: no-repeat;
+            padding-bottom: 0.5rem;
+        }
+        &:nth-of-type(3){
+            animation: fade-in 1s ease 2s forwards;
+        }
+        &:nth-of-type(4){
+            animation: fade-in 1s ease 3s forwards;
+        }
+    }
+}
+.subsection-element{
+    display: flex;
+    justify-content: space-between;
+    background-color: $white;
+    border-radius: 1rem;
+    box-shadow: $card-shadow;
+    transition: box-shadow 1s;
+    overflow: hidden;
+    .infos{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 0.9rem;
+        flex-grow: 1;
+        width: 80%;
+    }
+    h3{
+        text-align: left;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+    span{
+        font-weight: lighter;
+        font-size: 1rem;
+    }
+    .checked {
+        background: $color-tertiary;
+        color: $white;
+        display: flex;
+        flex: 0;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        transform-origin: right;
+        width: 20%;
+        min-width: 0;
+        transition: all .5s ease-in-out .2s;
+        max-width: 3.7rem;
+    }
+    &:hover{
+        box-shadow: $card-shadow-darker;
+        .checked{
+            flex-grow: 2;
+            flex-basis: 20%;
+        }
+    }
+}

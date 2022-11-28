@@ -38,6 +38,7 @@
     }
     @include format(desktop){
         column-gap: 5%;
+        padding: 3rem;
         ul{column-gap: 5%;}
     }
 }

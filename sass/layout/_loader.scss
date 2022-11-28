@@ -57,20 +57,20 @@
     align-items: center;
     background: $loader-gradient;
     background-size: 300%;
-    animation: background-waves 8s ease 1 alternate, fade-out 1s ease 3s forwards;
+    animation: background-waves 8s ease-in 1 alternate, fade-out 1s ease-in 3s forwards;
     &__logo{
         font-family: 'Shrikhand';
         font-size: 2rem;
         padding: 1rem 0;
         color: $light-grey;
-        animation: fade-in 1s, slide-in ease 1.5s forwards, grow 2s ease-out 3s forwards;
+        animation: fade-in 1s, slide-in ease-in 1.5s forwards, grow 2s ease-out 3s forwards;
         @include format(tablet){
             font-size: 4rem;
         }
     }
     &__dots{
         display: flex;
-        animation: fade-out 1s ease 4s forwards;
+        animation: fade-out 1s ease-in 4s forwards;
         span{
             display: block;
             width: 1rem;
