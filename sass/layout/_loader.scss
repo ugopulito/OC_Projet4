@@ -21,7 +21,7 @@
 }
 @keyframes beat {
     100% {
-        transform: scale(250%);
+        transform: scale(250);
         opacity: 10%;
     }
 }
@@ -75,7 +75,7 @@
             display: block;
             width: 1rem;
             height: 1rem;
-            transform: scale(10%);
+            transform: scale(0.1);
             background-color: $light-grey;
             border-radius: 2rem 2rem;
             animation: fade-in 1s forwards, beat 1s 5 alternate 0.3s;
