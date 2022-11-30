@@ -1,0 +1,7 @@
+Comment intégrer les animations avec Javascript : 
+
+    I. Pour les effets appliqués lors du hover :
+        Créer une classe et une règle css avec l'aspect final (effet :hover actuel)
+        Sélectionner les éléments à animer avec "document.querySelector"
+        Ajouter un déclencheur avec "addEventListener('mouseover')
+        Appliquer la classe précédemment définie
